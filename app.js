@@ -1,6 +1,8 @@
 const add = require('./add')
 const read = require('./read')
 const write = require('./write')
+const cmd = process.argv
+const del = require ('./del')
 
 // get user input
 const data = process.argv
@@ -18,6 +20,8 @@ if(data[2] == 'add') {
     var oldNote = read()
     // Add note to note.txt
     add(note,oldNote)
+
+    console.log(read());
 }
 
 if(data[2] == 'read') {
